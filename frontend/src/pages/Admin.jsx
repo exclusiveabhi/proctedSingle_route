@@ -4,6 +4,11 @@ import AuthContext from '../context/AuthContext';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import Swal from 'sweetalert2';
+import dotenv from 'dotenv';
+dotenv.config();
+
+
+const backend_url = process.env.BACKEND_URL;
 
 const Container = styled(motion.div)`
     display: flex;
@@ -48,7 +53,7 @@ const Admin = () => {
     useEffect(() => {
         const fetchSubmissions = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/admin/submissions', {
+                const response = await axios.get(`${backend_url}/api/admin/submissions`, {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 setSubmissions(response.data);

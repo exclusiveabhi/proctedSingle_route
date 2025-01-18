@@ -5,6 +5,10 @@ import AuthContext from '../context/AuthContext';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import Swal from 'sweetalert2';
+import dotenv from 'dotenv';
+dotenv.config();
+
+const backend_url = process.env.BACKEND_URL;
 
 const FormContainer = styled(motion.div)`
     display: flex;
@@ -71,7 +75,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/api/admin/login', { username, password });
+            const response = await axios.post(`${backend_url}/api/admin/login`, { username, password });
             login(response.data.token);
             Swal.fire({
                 position: 'top-center',

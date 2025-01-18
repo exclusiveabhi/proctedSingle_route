@@ -3,6 +3,10 @@ import axios from 'axios';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import Swal from 'sweetalert2';
+import dotenv from 'dotenv';
+dotenv.config();
+
+const backend_url = process.env.BACKEND_URL;
 
 const FormContainer = styled(motion.div)`
     display: flex;
@@ -77,7 +81,7 @@ const UserForm = () => {
         formData.append('image', image);
 
         try {
-            await axios.post('http://localhost:5000/api/users/submit', formData);
+            await axios.post(`${backend_url}/api/users/submit`, formData);
             Swal.fire({
                 position: 'top-center',
                 icon: 'success',
