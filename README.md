@@ -55,4 +55,4 @@ To get started with this project, follow these steps:
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/exclusiveabhi/react-components.git
-   cd assignment-project
+   cd react-components
