@@ -5,10 +5,9 @@ import AuthContext from '../context/AuthContext';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import Swal from 'sweetalert2';
-import dotenv from 'dotenv';
-dotenv.config();
 
-const backend_url = process.env.BACKEND_URL;
+
+const backend_url = "https://assignment-1r2e.onrender.com"
 
 const FormContainer = styled(motion.div)`
     display: flex;
