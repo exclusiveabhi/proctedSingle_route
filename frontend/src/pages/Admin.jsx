@@ -10,9 +10,18 @@ const Container = styled(motion.div)`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 18px;
     background: white;
     min-height: 100vh;
+`;
+
+const CardContainer = styled(motion.div)`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 `;
 
 const Card = styled(motion.div)`
@@ -20,9 +29,12 @@ const Card = styled(motion.div)`
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 600px;
+    width: 400px;
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
 
     @media (max-width: 600px) {
         padding: 15px;
@@ -63,22 +75,25 @@ const Admin = () => {
             transition={{ duration: 0.5 }}
         >
             <h1>Admin Page</h1>
-            {Array.isArray(submissions) && submissions.length > 0 ? (
-                submissions.map((submission) => (
-                    <Card
-                        key={submission._id}
-                        initial={{ y: 50 }}
-                        animate={{ y: 0 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        <h2>{submission.name}</h2>
-                        <p>{submission.socialHandle}</p>
-                        <img src={submission.imageUrl} alt={submission.name} style={{ width: '100%', borderRadius: '10px' }} />
-                    </Card>
-                ))
-            ) : (
-                <p>No submissions found.</p>
-            )}
+            <CardContainer>
+                {Array.isArray(submissions) && submissions.length > 0 ? (
+                    submissions.map((submission) => (
+                        <Card
+                            key={submission._id}
+                            initial={{ y: 50 }}
+                            animate={{ y: 0 }}
+                            transition={{ duration: 0.5 }}
+                        >
+                            <h2>{submission.name}</h2>
+                            <p>{submission.socialHandle}</p>
+                            <img src={submission.imageUrl} alt={submission.name} style={{ width: '100%', borderRadius: '10px' }} />
+                        </Card>
+                    ))
+                ) : (
+                    <center><p>No submissions found.</p></center>
+                    
+                )}
+            </CardContainer>
         </Container>
     );
 };
