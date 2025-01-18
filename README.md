@@ -1,4 +1,4 @@
-# Assignment Project: React Application
+# React components project !
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@
 
 ## Introduction
 
-Welcome to the Assignment Project! This project is a comprehensive web application built using React and Tailwind CSS. It aims to provide a seamless and responsive user experience across both mobile and desktop devices. The application includes various components such as About, Blog, Companies, FAQ, Footer, Header, HappyClients, MainPage, Number, OurVideo, People, Services, SubHeader, and Why.
+This project is a comprehensive web application built using React and Tailwind CSS. It aims to provide a seamless and responsive user experience across both mobile and desktop devices. The application includes various components such as About, Blog, Companies, FAQ, Footer, Header, HappyClients, MainPage, Number, OurVideo, People, Services, SubHeader, and Why.
 
 ## Project Structure
 
