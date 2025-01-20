@@ -146,7 +146,7 @@ const UserForm = () => {
     Login as Admin
 </Button>
 <center>
-<p>After click on submit please wait 5-7 sec.</p></center>
+<p>After click on submit please wait 10-15 sec.</p></center>
             </Form>
         </FormContainer>
         
