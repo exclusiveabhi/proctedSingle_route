@@ -129,7 +129,7 @@ const Login = () => {
                     Login
                 </Button>
                 <center>
-                    <p>After click on login please wait 5-7 sec.</p>
+                    <p>After click on login please wait 10-15 sec.</p>
                 </center>
             </Form>
         </FormContainer>
