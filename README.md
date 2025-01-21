@@ -87,5 +87,5 @@ Contributions are welcome! To contribute:
 
 ---
 
-### 🌟 Give a Star!  
+### 🌟 Give a Star !  
 If you found this project helpful or interesting, please give it a ⭐ on GitHub!  
